@@ -2,7 +2,11 @@ module github.com/taniko/bookshelf
 
 go 1.21.4
 
-require github.com/stretchr/testify v1.8.4
+require (
+	connectrpc.com/connect v1.12.0
+	github.com/stretchr/testify v1.8.4
+	google.golang.org/protobuf v1.31.0
+)
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
