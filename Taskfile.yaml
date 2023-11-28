@@ -1,0 +1,18 @@
+version: '3'
+tasks:
+  default:
+    cmds:
+      - task: lint
+      - task: test
+  install:
+    cmds:
+      - go install go.uber.org/mock/mockgen@latest
+      - go install honnef.co/go/tools/cmd/staticcheck@latest
+  test:
+    cmd: go test ./...
+  lint:
+    cmds:
+      - go vet ./...
+      - staticcheck ./...
+  generate:
+    cmd: go generate ./...
